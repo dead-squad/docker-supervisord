@@ -6,4 +6,4 @@ RUN pip install supervisor
 
 COPY supervisord.conf /etc/supervisord.conf
 
-ENTRYPOINT ["supervisord", "--nodaemon", "--configuration", "/etc/supervisord.conf"]
+ENTRYPOINT ["supervisord", "--nodaemon", "supervisorctl", "-c", "/etc/supervisord.conf"]
